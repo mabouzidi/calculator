@@ -17,8 +17,7 @@ import sys
 import gi
 from math import *
 gi.require_version('Gtk', '3.0')
-gi.require_version('Notify', '0.7')
-from gi.repository import Gtk,Gdk,Gio,Notify
+from gi.repository import Gtk,Gdk,Gio
 
 MENU_XML="""
 <?xml version="1.0" encoding="UTF-8"?>
@@ -269,8 +268,6 @@ class Application(Gtk.Application):
         table2.set_row_spacing(2,3)
         table2.set_row_spacing(3,3)
         hb.pack_start(pbutton)
-
-        #window.connect("delete-event", Gtk.main_quit)
         window.show_all()
 
 
